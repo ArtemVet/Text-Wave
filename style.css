@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wave {
+  position: relative;
+  font-size: 70px;
+  font-weight: bold;
+}
+.wave::before {
+  content: 'JAVA-SCRIPT';
+  position: absolute;
+  color: blue;
+  clip-path: polygon(0% 23%, 16% 25%, 28% 40%, 43% 51%, 64% 57%, 77% 58%, 100% 58%, 100% 100%, 0% 100%);
+  animation: wave 5s linear infinite;
+}
+@keyframes wave {
+  50% {
+    clip-path: polygon(0 60%, 14% 64%, 33% 61%, 52% 52%, 66% 34%, 83% 21%, 100% 20%, 100% 100%, 0% 100%);
+  }
+}
